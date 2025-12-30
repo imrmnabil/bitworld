@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=4 uid="uid://kjggy4lpvt7k"]
+[gd_scene load_steps=7 format=4 uid="uid://kjggy4lpvt7k"]
 
 [ext_resource type="PackedScene" uid="uid://c5fbwu6mgri84" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://dk44xuygrpriw" path="res://assets/tilemaps/monochrome_tilemap_transparent.png" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://d3jjxs6amnm0k" path="res://scenes/animatables/swing.tscn" id="3_lnu2h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -24,7 +25,6 @@ separation = Vector2i(1, 1)
 17:0/0 = 0
 18:0/0 = 0
 19:0/0 = 0
-20:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -42,7 +42,6 @@ separation = Vector2i(1, 1)
 17:1/0 = 0
 18:1/0 = 0
 19:1/0 = 0
-20:1/0 = 0
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -60,7 +59,6 @@ separation = Vector2i(1, 1)
 17:2/0 = 0
 18:2/0 = 0
 19:2/0 = 0
-20:2/0 = 0
 0:3/0 = 0
 1:3/0 = 0
 2:3/0 = 0
@@ -81,7 +79,6 @@ separation = Vector2i(1, 1)
 17:3/0 = 0
 18:3/0 = 0
 19:3/0 = 0
-20:3/0 = 0
 0:4/0 = 0
 1:4/0 = 0
 2:4/0 = 0
@@ -105,7 +102,6 @@ separation = Vector2i(1, 1)
 17:4/0 = 0
 18:4/0 = 0
 19:4/0 = 0
-20:4/0 = 0
 0:5/0 = 0
 1:5/0 = 0
 2:5/0 = 0
@@ -129,7 +125,6 @@ separation = Vector2i(1, 1)
 17:5/0 = 0
 18:5/0 = 0
 19:5/0 = 0
-20:5/0 = 0
 0:6/0 = 0
 1:6/0 = 0
 2:6/0 = 0
@@ -150,7 +145,6 @@ separation = Vector2i(1, 1)
 16:6/0 = 0
 18:6/0 = 0
 19:6/0 = 0
-20:6/0 = 0
 0:7/0 = 0
 1:7/0 = 0
 2:7/0 = 0
@@ -167,7 +161,6 @@ separation = Vector2i(1, 1)
 15:7/0 = 0
 18:7/0 = 0
 19:7/0 = 0
-20:7/0 = 0
 0:8/0 = 0
 1:8/0 = 0
 2:8/0 = 0
@@ -188,7 +181,6 @@ separation = Vector2i(1, 1)
 17:8/0 = 0
 18:8/0 = 0
 19:8/0 = 0
-20:8/0 = 0
 0:9/0 = 0
 1:9/0 = 0
 2:9/0 = 0
@@ -212,7 +204,6 @@ separation = Vector2i(1, 1)
 17:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:9/0 = 0
 19:9/0 = 0
-20:9/0 = 0
 0:10/0 = 0
 1:10/0 = 0
 2:10/0 = 0
@@ -235,7 +226,6 @@ separation = Vector2i(1, 1)
 17:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:10/0 = 0
 19:10/0 = 0
-20:10/0 = 0
 0:11/0 = 0
 1:11/0 = 0
 3:11/0 = 0
@@ -258,7 +248,6 @@ separation = Vector2i(1, 1)
 17:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:11/0 = 0
 19:11/0 = 0
-20:11/0 = 0
 0:12/0 = 0
 1:12/0 = 0
 2:12/0 = 0
@@ -279,7 +268,6 @@ separation = Vector2i(1, 1)
 17:12/0 = 0
 18:12/0 = 0
 19:12/0 = 0
-20:12/0 = 0
 0:13/0 = 0
 1:13/0 = 0
 2:13/0 = 0
@@ -300,7 +288,6 @@ separation = Vector2i(1, 1)
 17:13/0 = 0
 18:13/0 = 0
 19:13/0 = 0
-20:13/0 = 0
 0:14/0 = 0
 1:14/0 = 0
 2:14/0 = 0
@@ -321,7 +308,6 @@ separation = Vector2i(1, 1)
 17:14/0 = 0
 18:14/0 = 0
 19:14/0 = 0
-20:14/0 = 0
 0:15/0 = 0
 1:15/0 = 0
 2:15/0 = 0
@@ -342,7 +328,6 @@ separation = Vector2i(1, 1)
 17:15/0 = 0
 18:15/0 = 0
 19:15/0 = 0
-20:15/0 = 0
 0:16/0 = 0
 1:16/0 = 0
 2:16/0 = 0
@@ -363,7 +348,6 @@ separation = Vector2i(1, 1)
 17:16/0 = 0
 18:16/0 = 0
 19:16/0 = 0
-20:16/0 = 0
 0:17/0 = 0
 1:17/0 = 0
 2:17/0 = 0
@@ -384,7 +368,6 @@ separation = Vector2i(1, 1)
 17:17/0 = 0
 18:17/0 = 0
 19:17/0 = 0
-20:17/0 = 0
 0:18/0 = 0
 1:18/0 = 0
 2:18/0 = 0
@@ -405,7 +388,6 @@ separation = Vector2i(1, 1)
 17:18/0 = 0
 18:18/0 = 0
 19:18/0 = 0
-20:18/0 = 0
 0:19/0 = 0
 1:19/0 = 0
 2:19/0 = 0
@@ -425,28 +407,6 @@ separation = Vector2i(1, 1)
 16:19/0 = 0
 17:19/0 = 0
 18:19/0 = 0
-20:19/0 = 0
-0:20/0 = 0
-1:20/0 = 0
-2:20/0 = 0
-3:20/0 = 0
-4:20/0 = 0
-5:20/0 = 0
-6:20/0 = 0
-7:20/0 = 0
-8:20/0 = 0
-9:20/0 = 0
-10:20/0 = 0
-11:20/0 = 0
-12:20/0 = 0
-13:20/0 = 0
-14:20/0 = 0
-15:20/0 = 0
-16:20/0 = 0
-17:20/0 = 0
-18:20/0 = 0
-19:20/0 = 0
-20:20/0 = 0
 4:1/0 = 0
 4:2/0 = 0
 5:0/0 = 0
@@ -454,67 +414,21 @@ separation = Vector2i(1, 1)
 5:2/0 = 0
 6:1/0 = 0
 6:2/0 = 0
+12:6/0 = 0
+17:6/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+2:11/0 = 0
+19:19/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_lbhrr"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqjtg"]
-texture = ExtResource("2_yqjtg")
-separation = Vector2i(1, 1)
-5:0/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-6:2/0 = 0
-5:2/0 = 0
-4:2/0 = 0
-4:0/0 = 0
-3:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_lnu2h"]
-sources/0 = SubResource("TileSetAtlasSource_yqjtg")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
-size = Vector2(47.873055, 6.4641037)
-
-[sub_resource type="Animation" id="Animation_yqjtg"]
-resource_name = "Swing"
-length = 1.5
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.75, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.12217305, 0.0, -0.12217305]
-}
-
-[sub_resource type="Animation" id="Animation_lnu2h"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_lbhrr"]
-_data = {
-&"RESET": SubResource("Animation_lnu2h"),
-&"Swing": SubResource("Animation_yqjtg")
-}
+[sub_resource type="CircleShape2D" id="CircleShape2D_lnu2h"]
+radius = 5.0990195
 
 [node name="Game" type="Node2D"]
 
@@ -530,20 +444,22 @@ position = Vector2(2, 0)
 tile_map_data = PackedByteArray("AAD7/wAAAAAIAAQAAAD8/wAAAAAIAAQAAAD9/wAAAAAIAAQAAAD+/wAAAAAIAAQAAAD//wAAAAAIAAQAAAAAAAAAAAAIAAQAAAABAAAAAAAIAAQAAAACAAAAAAAIAAQAAAADAAAAAAAIAAQAAAAEAAAAAAAIAAQAAAAEAP//AAANAAMAAAAFAAAAAAAIAAQAAAAGAAAAAAAJAAQAAAD7/wEAAAAIAAUAAAD8/wEAAAAIAAUAAAD9/wEAAAAIAAUAAAD+/wEAAAAIAAUAAAD//wEAAAAIAAUAAAAAAAEAAAAIAAUAAAABAAEAAAAIAAUAAAACAAEAAAAIAAUAAAADAAEAAAAIAAUAAAAEAAEAAAAIAAUAAAAFAAEAAAAIAAUAAAAGAAEAAAAJAAUAAAAGAAIAAAAJAAUAAAAFAAIAAAAIAAUAAAAEAAIAAAAIAAUAAAADAAIAAAAIAAUAAAACAAIAAAAIAAUAAAD7/wIAAAAIAAUAAAD8/wIAAAAIAAUAAAD9/wIAAAAIAAUAAAD+/wIAAAAIAAUAAAD//wIAAAAIAAUAAAAAAAIAAAAIAAUAAAABAAIAAAAIAAUAAAD8////AAASAAEAAAD+////AAAQAAAAAAACAP//AAARAAAAAAA=")
 tile_set = SubResource("TileSet_lbhrr")
 
-[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
-position = Vector2(188, -174.00003)
+[node name="Swing" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(179, -168)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="AnimatableBody2D"]
-position = Vector2(7.9487305, 176.61215)
-tile_map_data = PackedByteArray("AAD+////AAAEAAEAAAD+/wAAAAAEAAIAAAD///7/AAAFAAAAAAD/////AAAFAAEAAAD//wAAAAAFAAIAAAAAAP//AAAGAAEAAAAAAAAAAAAGAAIAAAD///3/AAAEAAAAAAD///z/AAAEAAAAAAD///v/AAAEAAAAAAD///r/AAAEAAAAAAD///n/AAAEAAAAAAD///j/AAAEAAAAAAD///f/AAAEAAAAAAD///b/AAAEAAAAAAD///X/AAADAAAAAAA=")
-tile_set = SubResource("TileSet_lnu2h")
+[node name="Swing2" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(271, -168)
+scale = Vector2(-1, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
-position = Vector2(0.05771637, 180.09998)
-shape = SubResource("RectangleShape2D_yqjtg")
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(89, -58)
+gravity_scale = 0.5
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D"]
-libraries = {
-&"": SubResource("AnimationLibrary_lbhrr")
-}
-autoplay = "Swing"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+scale = Vector2(1.3200024, 1.3200024)
+shape = SubResource("CircleShape2D_lnu2h")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("2_yqjtg")
+region_enabled = true
+region_rect = Rect2(154, 307, 14, 14)
