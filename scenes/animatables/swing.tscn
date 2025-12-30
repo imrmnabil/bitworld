@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://d3jjxs6amnm0k"]
+[gd_scene load_steps=7 format=4 uid="uid://d3jjxs6amnm0k"]
 
 [ext_resource type="Texture2D" uid="uid://dk44xuygrpriw" path="res://assets/tilemaps/monochrome_tilemap_transparent.png" id="1_olhel"]
 
@@ -18,8 +18,32 @@ separation = Vector2i(1, 1)
 [sub_resource type="TileSet" id="TileSet_lnu2h"]
 sources/0 = SubResource("TileSetAtlasSource_yqjtg")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
-size = Vector2(47.873055, 6.4641037)
+[sub_resource type="Animation" id="Animation_lnu2h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_yqjtg"]
 resource_name = "swing"
@@ -50,33 +74,6 @@ tracks/1/keys = {
 "values": [0.12217305, 0.0, -0.12217305]
 }
 
-[sub_resource type="Animation" id="Animation_lnu2h"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("..:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lbhrr"]
 _data = {
 &"RESET": SubResource("Animation_lnu2h"),
@@ -86,22 +83,21 @@ _data = {
 [node name="Swing" type="Node2D"]
 
 [node name="Parent" type="Node2D" parent="."]
-position = Vector2(-16, 0)
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="Parent"]
-rotation = 0.12217305
+sync_to_physics = false
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Parent/AnimatableBody2D"]
 position = Vector2(7.9487305, 176.61215)
 tile_map_data = PackedByteArray("AAD+////AAAEAAEAAAD+/wAAAAAEAAIAAAD///7/AAAFAAAAAAD/////AAAFAAEAAAD//wAAAAAFAAIAAAAAAP//AAAGAAEAAAAAAAAAAAAGAAIAAAD///3/AAAEAAAAAAD///z/AAAEAAAAAAD///v/AAAEAAAAAAD///r/AAAEAAAAAAD///n/AAAEAAAAAAD///j/AAAEAAAAAAD///f/AAAEAAAAAAD///b/AAAEAAAAAAD///X/AAADAAAAAAA=")
 tile_set = SubResource("TileSet_lnu2h")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Parent/AnimatableBody2D"]
-position = Vector2(0.05771637, 180.09998)
-shape = SubResource("RectangleShape2D_yqjtg")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Parent/AnimatableBody2D"]
 libraries = {
 &"": SubResource("AnimationLibrary_lbhrr")
 }
 autoplay = "swing"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Parent/AnimatableBody2D"]
+position = Vector2(0.8492727, 179.23247)
+polygon = PackedVector2Array(23.150726, -2.2324677, 22.150726, 2.7675323, -23.849274, 2.7675323, -24.849274, -2.2324677, 0, 0)

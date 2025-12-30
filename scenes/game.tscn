@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c5fbwu6mgri84" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://dk44xuygrpriw" path="res://assets/tilemaps/monochrome_tilemap_transparent.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://d3jjxs6amnm0k" path="res://scenes/animatables/swing.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://c2cy6lv38yljf" path="res://scenes/ball.tscn" id="4_lbhrr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -427,13 +428,10 @@ separation = Vector2i(1, 1)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lnu2h"]
-radius = 5.0990195
-
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(0, -1)
+position = Vector2(-56, -1)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(3, 0)
@@ -445,21 +443,11 @@ tile_map_data = PackedByteArray("AAD7/wAAAAAIAAQAAAD8/wAAAAAIAAQAAAD9/wAAAAAIAAQ
 tile_set = SubResource("TileSet_lbhrr")
 
 [node name="Swing" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(179, -168)
+position = Vector2(178, -168)
 
 [node name="Swing2" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(271, -168)
+position = Vector2(303, -168)
 scale = Vector2(-1, 1)
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="Ball" parent="." groups=["balls"] instance=ExtResource("4_lbhrr")]
 position = Vector2(89, -58)
-gravity_scale = 0.5
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-scale = Vector2(1.3200024, 1.3200024)
-shape = SubResource("CircleShape2D_lnu2h")
-
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-texture = ExtResource("2_yqjtg")
-region_enabled = true
-region_rect = Rect2(154, 307, 14, 14)

@@ -29,5 +29,18 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0,  SPEED)
 		if not is_flying:
 			sprite.play('idle')
-
+	
 	move_and_slide()
+	# Pushing Logic
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+
+		# Check if the object has the "ball_group" tag
+		if collider.is_in_group("balls"):
+			# 'normal' is the direction of the hit
+			# We multiply by a negative number to push AWAY from the player
+			var push_direction = -collision.get_normal()
+			
+			# 200.0 is the force. Adjust this to your liking!
+			collider.apply_central_impulse(push_direction * 200.0)
